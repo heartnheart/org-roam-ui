@@ -36,7 +36,7 @@ export const UniOrg = (props: UniOrgProps) => {
 
   const file = encodeURIComponent(encodeURIComponent(previewNode.file))
   useEffect(() => {
-    fetch(`http://localhost:35901/file/${file}`)
+    fetch(`http://${window.location.hostname}:35901/file/${file}`)
       .then((res) => {
         return res.text()
       })
